@@ -1,0 +1,171 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <title>menu vertical responsiva</title>
+    
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Koulen&family=Montserrat:ital,wght@1,200&display=swap" rel="stylesheet">
+    
+    <link rel="stylesheet" href="menu.css">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    
+    <nav>
+        
+        <div class="mobile">
+            <div class="header">
+            <div class="logo">
+                <img src="Img/logo.png" width="55px" height="55px"alt="" >
+               
+            </div>
+                
+                <div class="more"><button id="bMore"><span class="icon-cog"></span></button>
+                </div>
+            </div>    
+        
+        <div id="links" class="links collapse">
+            
+           <a href="#">login</a>
+           <a href="#">sign up</a>
+           <a href="#">servicios</a> 
+           <a href="#">about</a>
+           <a href="#">conctato</a>
+        </div>
+        </div>
+        <div class="desktop">
+            <div class="logo">
+                <img src="Img/logo.png" width="55px" height="55px"alt="" >
+            </div>
+            
+            
+            <div class="primary">
+                
+           <a href="#">servicios</a> 
+           <a href="#">about</a>
+           <a href="#">conctato</a>
+                
+            </div>
+    
+    
+    <div class="secundary full">
+        
+        <a href="#">login</a>
+        <a href="#">sign up</a>         
+        
+    </div>    
+     
+    <div class="secundary mini">
+        
+    <a href="#" class="more"><span class="icon-cog"></span></a>
+       
+       <div class="submenu">
+           
+        <a href="#">login</a>
+        <a href="#">sign up</a>           
+       </div>
+       
+    </div>
+        </div>
+    </nav>
+    
+    <main>
+        
+    <!-- cuerpo de mi portafolio -->
+    
+    
+        <div class="presentation">
+       <img src="Img/Perfil.jpg" alt="" width="50px" height="50px"></img>
+       <h2>Hola! Me Llamo Samuel</h2>
+       
+      <p class="descripcion-mia">tengo 18 años soy de la cuidad de México <br> actualmente soy principiante en esto de desarrollo web<br> mis conocimientos son básicos y los leguages que se son:<br>HTML CSS y muy poco De Javascript<br>tambien me especialiso en otras cosas como por ejemplo: <br>Edición De Video y De Fotos entre otras cosas mas </p>
+        </div>
+        
+        
+        <!-- especialodades -->
+      
+      <div class="logros">
+        
+ <div class="edit_ft">
+     <h2>Edición De Fotos</h2>
+<div class="galeria" style="--w: 260px; --h: 200px;">
+  <input type="radio" name="navigation1" id="_1" checked>
+  <input type="radio" name="navigation1" id="_2">
+  <input type="radio" name="navigation1" id="_3">
+  <input type="radio" name="navigation1" id="_4"> 
+  <img src="img/foto1.jpg" width="260" height="200" alt="Galeria CSS 1" />
+  <img src="Img/foto2.jpg" width="260" height="200" alt="Galeria CSS 2"  />
+  <img src="img/foto3.jpg" width="260" height="200" alt="Galeria CSS 3" />
+  <img src="img/foto4.jpg" width="260" height="200" alt="Galeria CSS 4" />
+</div>
+      
+      </div>
+      
+      <div class="edit-video">
+          <h2>Edicion de video</h2>
+      
+ <iframe width="260" height="200" src="https://www.youtube.com/embed/GcxSwhgKPoA" title="YouTube video player" class="youtube1"></iframe>
+      
+      </div>
+              
+              
+              </div>
+      
+        <!-- contactp -->
+        <footer>
+            
+           <input class="button" type="button" id="abrir" value="conctacto">
+           <br>
+           <span class="autor-original">created by: RaxStudio</span>
+            
+        </footer>
+        
+        <div class="overlay" id="overlay">
+            <div class="popup" id="popup">
+                <a href="#" id="btn-cerrar-popup" class="btn-cerrar-popup">❌</a>
+                <h3>CONCTACT</h3>
+                <h5>manda tu opinion</h5>
+                
+                <form>
+                    
+   <div class="contenedor-input">
+        <input type="text" placeholder="Nombre">
+        <input type="Text" placeholder="Apellido">
+        <input type="text" placeholder="Opinion">
+                   </div>
+                   
+                   <input type="submit" class="btn-submit" value="Aceptar">
+                   
+                </form>
+            </div>
+        </div>
+        
+    </main>
+    <!-- javascript -->
+    
+    <script>
+        
+        const bMore = document.querySelector("#bMore");
+       const links = document.querySelector('#links');   
+        bMore.addEventListener("click", (e) => {
+          links.classList.toggle ('collapse');
+          });
+          
+    var btnAbrirPopup = document.getElementById('abrir'),
+     overlay = document.getElementById('overlay'),
+     popup = document.getElementById('popup'),
+      btnCerrarPopup= document.getElementById('btn-cerrar-popup');
+          btnAbrirPopup.addEventListener('click', function(){
+              overlay.classList.add("active");
+          });
+          
+         btnCerrarPopup.addEventListener('click', function(){
+              overlay.classList.remove("active");
+          });
+          
+       </script>
+    
+</body>
+</html>
