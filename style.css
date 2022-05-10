@@ -10,7 +10,7 @@ body{
 }
 
 nav{
-    background: url('fondo.jpeg') center;
+    background: url('/fondo.jpeg') center;
     background-repeat: no-repeat;
     background-size: 220%;
     color: white;
